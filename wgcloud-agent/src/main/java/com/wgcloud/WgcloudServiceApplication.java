@@ -19,6 +19,7 @@ import java.nio.charset.Charset;
 @EnableCaching
 @EnableScheduling
 public class WgcloudServiceApplication {
+
     public static void main(String[] args) {
         SpringApplication.run(WgcloudServiceApplication.class, args);
     }
