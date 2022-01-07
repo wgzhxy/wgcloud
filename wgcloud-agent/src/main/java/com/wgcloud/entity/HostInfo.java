@@ -3,99 +3,79 @@ package com.wgcloud.entity;
 import java.util.Date;
 
 /**
- * @version V2.3
- * @ClassName:HostInfo.java
+ * @version V2.3 @ClassName:HostInfo.java
  * @author: wgcloud
- * @date: 2019年11月16日
- * @Description: host的IP密码等信息
- * @Copyright: 2017-2021 www.wgstart.com. All rights reserved.
+ * @date: 2019年11月16日 @Description: host的IP密码等信息 @Copyright: 2017-2021 www.wgstart.com. All rights
+ *     reserved.
  */
 public class HostInfo extends BaseEntity {
 
+  /** */
+  private static final long serialVersionUID = 3875927332935900938L;
 
-    /**
-     *
-     */
-    private static final long serialVersionUID = 3875927332935900938L;
+  /** host名称 */
+  private String ip;
 
+  /** 用户 */
+  private String root;
 
-    /**
-     * host名称
-     */
-    private String ip;
+  /** ssh端口 */
+  private String port;
 
-    /**
-     * 用户
-     */
-    private String root;
+  /** 密码 */
+  private String passwd;
 
-    /**
-     * ssh端口
-     */
-    private String port;
+  /** 密码 */
+  private String remark;
 
-    /**
-     * 密码
-     */
-    private String passwd;
+  /** 创建时间 */
+  private Date createTime;
 
-    /**
-     * 密码
-     */
-    private String remark;
+  public String getIp() {
+    return ip;
+  }
 
+  public void setIp(String ip) {
+    this.ip = ip;
+  }
 
-    /**
-     * 创建时间
-     */
-    private Date createTime;
+  public String getRoot() {
+    return root;
+  }
 
+  public void setRoot(String root) {
+    this.root = root;
+  }
 
-    public String getIp() {
-        return ip;
-    }
+  public String getPort() {
+    return port;
+  }
 
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
+  public void setPort(String port) {
+    this.port = port;
+  }
 
-    public String getRoot() {
-        return root;
-    }
+  public String getPasswd() {
+    return passwd;
+  }
 
-    public void setRoot(String root) {
-        this.root = root;
-    }
+  public void setPasswd(String passwd) {
+    this.passwd = passwd;
+  }
 
-    public String getPort() {
-        return port;
-    }
+  public Date getCreateTime() {
+    return createTime;
+  }
 
-    public void setPort(String port) {
-        this.port = port;
-    }
+  public void setCreateTime(Date createTime) {
+    this.createTime = createTime;
+  }
 
-    public String getPasswd() {
-        return passwd;
-    }
+  public String getRemark() {
+    return remark;
+  }
 
-    public void setPasswd(String passwd) {
-        this.passwd = passwd;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
+  public void setRemark(String remark) {
+    this.remark = remark;
+  }
 }

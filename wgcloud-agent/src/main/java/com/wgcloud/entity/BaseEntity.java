@@ -2,49 +2,44 @@ package com.wgcloud.entity;
 
 import java.io.Serializable;
 
-
 public class BaseEntity implements Serializable {
 
+  /** */
+  private static final long serialVersionUID = 8698319936744959815L;
 
-    /**
-     *
-     */
-    private static final long serialVersionUID = 8698319936744959815L;
+  private String id;
 
+  private Integer page;
 
-    private String id;
+  private Integer pageSize;
 
-    private Integer page;
+  public String getId() {
+    return id;
+  }
 
-    private Integer pageSize;
+  public void setId(String id) {
+    this.id = id;
+  }
 
-    public String getId() {
-        return id;
+  public Integer getPage() {
+    if (page == null) {
+      page = 1;
     }
+    return page;
+  }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+  public void setPage(Integer page) {
+    this.page = page;
+  }
 
-    public Integer getPage() {
-        if (page == null) {
-            page = 1;
-        }
-        return page;
+  public Integer getPageSize() {
+    if (pageSize == null) {
+      pageSize = 20;
     }
+    return pageSize;
+  }
 
-    public void setPage(Integer page) {
-        this.page = page;
-    }
-
-    public Integer getPageSize() {
-        if (pageSize == null) {
-            pageSize = 20;
-        }
-        return pageSize;
-    }
-
-    public void setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-    }
+  public void setPageSize(Integer pageSize) {
+    this.pageSize = pageSize;
+  }
 }

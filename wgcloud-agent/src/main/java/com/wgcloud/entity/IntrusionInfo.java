@@ -3,114 +3,90 @@ package com.wgcloud.entity;
 import java.sql.Timestamp;
 
 /**
- * @version V2.3
- * @ClassName:IntrusionInfo.java
+ * @version V2.3 @ClassName:IntrusionInfo.java
  * @author: wgcloud
- * @date: 2019年11月16日
- * @Description: 检查系统入侵信息
- * @Copyright: 2017-2021 www.wgstart.com. All rights reserved.
+ * @date: 2019年11月16日 @Description: 检查系统入侵信息 @Copyright: 2017-2021 www.wgstart.com. All rights
+ *     reserved.
  */
 public class IntrusionInfo extends BaseEntity {
 
+  /** */
+  private static final long serialVersionUID = 879979812204191283L;
 
-    /**
-     *
-     */
-    private static final long serialVersionUID = 879979812204191283L;
+  /** host名称 */
+  private String hostname;
 
+  /** 系统内核模块 */
+  private String lsmod;
 
-    /**
-     * host名称
-     */
-    private String hostname;
+  /** 查看passwd文件修改时间 */
+  private String passwdInfo;
 
-    /**
-     * 系统内核模块
-     */
-    private String lsmod;
+  /** 查看系统计划任务 */
+  private String crontab;
 
-    /**
-     * 查看passwd文件修改时间
-     */
-    private String passwdInfo;
+  /** 检查网络，正常网卡不该在promisc模式，可能存在sniffer */
+  private String promisc;
 
-    /**
-     * 查看系统计划任务
-     */
-    private String crontab;
+  /** 系统rpc服务 */
+  private String rpcinfo;
 
-    /**
-     * 检查网络，正常网卡不该在promisc模式，可能存在sniffer
-     */
-    private String promisc;
+  /** 创建时间 */
+  private Timestamp createTime;
 
-    /**
-     * 系统rpc服务
-     */
-    private String rpcinfo;
+  public Timestamp getCreateTime() {
+    return createTime;
+  }
 
+  public void setCreateTime(Timestamp createTime) {
+    this.createTime = createTime;
+  }
 
-    /**
-     * 创建时间
-     */
-    private Timestamp createTime;
+  public String getHostname() {
+    return hostname;
+  }
 
+  public void setHostname(String hostname) {
+    this.hostname = hostname;
+  }
 
-    public Timestamp getCreateTime() {
-        return createTime;
-    }
+  public String getLsmod() {
+    return lsmod;
+  }
 
-    public void setCreateTime(Timestamp createTime) {
-        this.createTime = createTime;
-    }
+  public void setLsmod(String lsmod) {
+    this.lsmod = lsmod;
+  }
 
-    public String getHostname() {
-        return hostname;
-    }
+  public String getPasswdInfo() {
+    return passwdInfo;
+  }
 
-    public void setHostname(String hostname) {
-        this.hostname = hostname;
-    }
+  public void setPasswdInfo(String passwdInfo) {
+    this.passwdInfo = passwdInfo;
+  }
 
-    public String getLsmod() {
-        return lsmod;
-    }
+  public String getCrontab() {
+    return crontab;
+  }
 
-    public void setLsmod(String lsmod) {
-        this.lsmod = lsmod;
-    }
+  public void setCrontab(String crontab) {
+    this.crontab = crontab;
+  }
 
-    public String getPasswdInfo() {
-        return passwdInfo;
-    }
+  public String getPromisc() {
+    return promisc;
+  }
 
-    public void setPasswdInfo(String passwdInfo) {
-        this.passwdInfo = passwdInfo;
-    }
+  public void setPromisc(String promisc) {
+    this.promisc = promisc;
+  }
 
-    public String getCrontab() {
-        return crontab;
-    }
+  public String getRpcinfo() {
+    return rpcinfo;
+  }
 
-    public void setCrontab(String crontab) {
-        this.crontab = crontab;
-    }
-
-    public String getPromisc() {
-        return promisc;
-    }
-
-    public void setPromisc(String promisc) {
-        this.promisc = promisc;
-    }
-
-    public String getRpcinfo() {
-        return rpcinfo;
-    }
-
-    public void setRpcinfo(String rpcinfo) {
-        this.rpcinfo = rpcinfo;
-    }
-
-
+  public void setRpcinfo(String rpcinfo) {
+    this.rpcinfo = rpcinfo;
+  }
 }

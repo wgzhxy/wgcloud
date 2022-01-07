@@ -5,92 +5,71 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.Date;
 
 /**
- * @version V2.3
- * @ClassName:AppState.java
+ * @version V2.3 @ClassName:AppState.java
  * @author: wgcloud
- * @date: 2019年11月16日
- * @Description: app状态监控
- * @Copyright: 2017-2021 www.wgstart.com. All rights reserved.
+ * @date: 2019年11月16日 @Description: app状态监控 @Copyright: 2017-2021 www.wgstart.com. All rights
+ *     reserved.
  */
 public class AppState extends BaseEntity {
 
-    /**
-     *
-     */
-    private static final long serialVersionUID = -2913111613773445949L;
+  /** */
+  private static final long serialVersionUID = -2913111613773445949L;
 
+  /** 应用信息ID */
+  private String appInfoId;
 
-    /**
-     * 应用信息ID
-     */
-    private String appInfoId;
+  /** %CPU */
+  private Double cpuPer;
 
+  /** %MEM */
+  private Double memPer;
 
-    /**
-     * %CPU
-     */
-    private Double cpuPer;
+  /** 添加时间 MM-dd hh:mm:ss */
+  private String dateStr;
 
-    /**
-     * %MEM
-     */
-    private Double memPer;
+  /** 创建时间 */
+  private Date createTime;
 
-    /**
-     * 添加时间
-     * MM-dd hh:mm:ss
-     */
-    private String dateStr;
+  public Double getCpuPer() {
+    return cpuPer;
+  }
 
-    /**
-     * 创建时间
-     */
-    private Date createTime;
+  public void setCpuPer(Double cpuPer) {
+    this.cpuPer = cpuPer;
+  }
 
+  public String getAppInfoId() {
+    return appInfoId;
+  }
 
-    public Double getCpuPer() {
-        return cpuPer;
+  public void setAppInfoId(String appInfoId) {
+    this.appInfoId = appInfoId;
+  }
+
+  public Double getMemPer() {
+    return memPer;
+  }
+
+  public void setMemPer(Double memPer) {
+    this.memPer = memPer;
+  }
+
+  public Date getCreateTime() {
+    return createTime;
+  }
+
+  public void setCreateTime(Date createTime) {
+    this.createTime = createTime;
+  }
+
+  public String getDateStr() {
+    if (!StringUtils.isEmpty(dateStr) && dateStr.length() > 16) {
+      return dateStr.substring(5);
     }
+    return dateStr;
+  }
 
-    public void setCpuPer(Double cpuPer) {
-        this.cpuPer = cpuPer;
-    }
-
-
-    public String getAppInfoId() {
-        return appInfoId;
-    }
-
-    public void setAppInfoId(String appInfoId) {
-        this.appInfoId = appInfoId;
-    }
-
-    public Double getMemPer() {
-        return memPer;
-    }
-
-    public void setMemPer(Double memPer) {
-        this.memPer = memPer;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public String getDateStr() {
-        if (!StringUtils.isEmpty(dateStr) && dateStr.length() > 16) {
-            return dateStr.substring(5);
-        }
-        return dateStr;
-    }
-
-    public void setDateStr(String dateStr) {
-        this.dateStr = dateStr;
-    }
-
-
+  public void setDateStr(String dateStr) {
+    this.dateStr = dateStr;
+  }
 }
